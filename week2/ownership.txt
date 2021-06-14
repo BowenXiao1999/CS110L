@@ -9,6 +9,7 @@ fn main() {
     println!("{}", ref3.to_uppercase());
 }
 ```
+No. You can not modify a mut variable when you have read only references.
 
 
 
@@ -19,6 +20,7 @@ fn drip_drop() -> &String {
     return &s;
 }
 ```
+No. You can not borrow from a local object that will be dropped.
 
 
 
@@ -32,3 +34,4 @@ fn main() {
     println!("{}", s2);
 }
 ```
+No. Can not move out of the Vec<String>
